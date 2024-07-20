@@ -64,18 +64,18 @@ label= "BASE"                                                  ;
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │    Q    │    W    │    E    │    R    │    T    │                    │    Y    │    U    │    I    │    O    │    P    │   
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │   TAB   │    A    │    S    │    D    │    F    │    G    │                    │    H    │    J    │    K    │    L    │    ;    │    "    │
+   │   ESC   │    A    │    S    │    D    │    F    │    G    │                    │    H    │    J    │    K    │    L    │    ;    │    "    │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │   DEL   │    Z    │    X    │    C    │    V    │    B    ││  MUTE  ││PLY/PSE ││    K    │    M    │    ,    │    .    │    /    │    \    │
+   │   TAB   │    Z    │    X    │    C    │    V    │    B    ││  MUTE  ││PLY/PSE ││    N    │    M    │    ,    │    .    │    /    │    \    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │  CTRL   │  LOWER  │  SPACE  │   ALT   ││ CMD/WIN │  ENTER  │  RAISE  │  BSPCE  │  
+                                 │  CTRL   │  LOWER  │  SPACE  │   ALT   ││   DEL   │  ENTER  │  RAISE  │  BSPCE  │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
               &kp Q     &kp W     &kp E     &kp R     &kp T                          &kp Y     &kp U     &kp I     &kp O     &kp P
     &kp ESC   &kp A     &kp S     &kp D   &hm LSHFT F &kp G                          &kp H   &hm RSHFT J &kp K     &kp L     &kp SEMI     &kp SQT
-    &kp DEL   &kp Z     &kp X     &kp C     &kp V     &kp B     &kp C_MUTE     &kp C_PP    &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp BSLH
-                                  &kp LCTRL &mo LOWER &kp SPACE &kp LALT   &kp TAB  &kp RET   &mo RAISE &kp BSPC    
+    &kp TAB   &kp Z     &kp X     &kp C     &kp V     &kp B     &kp C_MUTE     &kp C_PP    &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp BSLH
+                                  &kp LCTRL &mo LOWER &kp SPACE &kp LALT   &kp DEL  &kp RET   &mo RAISE &kp BSPC    
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
@@ -92,16 +92,16 @@ label= "LOWER"                                                 ;
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
    │         │         │   LEFT  │  DOWN   │  RIGHT  │    [    │                    │    ]    │    4    │    5    │    6    │    -    │         │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │         │         │   P UP  │ C LOCK  │ P DOWN  │    (    ││        ││        ││    )    │    1    │    2    │    3    │    *    │         │
+   │         │         │   P UP  │ C LOCK  │ P DOWN  │    (    ││  MUTE  ││PLY/PSE ││    )    │    1    │    2    │    3    │    *    │         │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
-                                 │         │         │         │         ││         │         │    0    │         │  
+                                 │         │         │         │         ││  DEL    │  ENTER  │    0    │         │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
     &ext_power EP_TOG   &trans    &kp UP    &trans    &kp LBRC                       &kp RBRC  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_PLUS
     &trans  &rgb_ug RGB_EFF    &kp LEFT  &kp DOWN  &kp RIGHT &kp LBKT                       &kp RBKT  &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MINUS &trans
-    &trans    &trans    &kp PG_UP &kp CAPS  &kp PG_DN &kp LPAR  &trans     &trans    &kp RPAR  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY &trans
-                                  &trans    &trans    &trans    &trans     &trans    &kp DELETE &kp KP_N0 &trans  
+    &trans    &trans    &kp PG_UP &kp CAPS  &kp PG_DN &kp LPAR  &kp C_MUTE     &kp C_PP    &kp RPAR  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MULTIPLY &trans
+                                  &trans    &trans    &trans    &trans     &kp DEL  &kp RET &kp KP_N0 &trans  
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
