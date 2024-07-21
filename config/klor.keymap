@@ -44,7 +44,7 @@
      combos {
             compatible = "zmk,combos";
             combo_esc {
-                timeout-ms = <250>;
+                timeout-ms = <150>;
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
             };
@@ -103,7 +103,7 @@ label= "LOWER"                                                 ;
     &trans    &trans    &kp PG_UP &kp CAPS  &kp PG_DN &kp LPAR  &kp C_MUTE     &kp K_PP    &kp RPAR  &kp N1 &kp N2 &kp N3 &kp KP_MULTIPLY &trans
                                   &trans    &trans    &trans    &trans     &trans    &kp DELETE &kp N0 &trans  
                         >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -118,7 +118,7 @@ label= "RAISE"                                                 ;
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
    │         │         │         │         │         │         │                    │         │         │         │         │         │         │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │         │         │         │         │         │         ││  MUTE  ││PLY/PSE ││         │         │         │         │         │         │
+   │         │         │         │         │         │         ││        ││        ││         │         │         │         │         │         │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │         │  ADJUST │         │         ││         │         │         │         │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
@@ -126,10 +126,10 @@ label= "RAISE"                                                 ;
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
               &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                         &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     
     &trans    &trans    &trans    &trans    &trans    &trans                         &trans    &trans    &trans    &trans    &trans    &trans  
-    &trans    &trans    &trans    &trans    &trans    &trans    &kp C_MUTE     &kp K_PP    &trans    &trans    &trans    &trans    &trans    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    &trans    &trans    &trans
                                   &trans &mo ADJUST   &trans    &trans     &trans    &trans    &trans    &trans  
                         >;
-                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
+                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -155,7 +155,7 @@ label= "ADJUST"                                                ;
     &trans   &bt BT_PRV &trans    &trans    &kp KP_N6 &trans    &trans     &trans    &bt BT_PRV &trans   &trans    &trans    &trans    &trans    
                                   &trans    &trans    &trans    &trans     &trans    &trans    &trans    &trans    
                         >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
         };
 };
