@@ -91,17 +91,17 @@ label= "LOWER"                                                 ;
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
              │         │         │    UP   │         │    {    │                    │    }    │    7    │    8    │    9    │    +    │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │         │         │   LEFT  │  DOWN   │  RIGHT  │    [    │                    │    ]    │    4    │    5    │    6    │    -    │         │
+   │ RGB_BRI │ RGB_EFF │   LEFT  │  DOWN   │  RIGHT  │    [    │                    │    ]    │    4    │    5    │    6    │    -    │         │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │         │         │   P UP  │ C LOCK  │ P DOWN  │    (    ││  MUTE  ││PLY/PSE ││    )    │    1    │    2    │    3    │    *    │         │
+   │ RGB_BRD │         │   P UP  │ C LOCK  │ P DOWN  │    (    ││  MUTE  ││PLY/PSE ││    )    │    1    │    2    │    3    │    *    │         │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │         │         │         │         ││         │         │    0    │         │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-    &ext_power EP_TOG   &trans    &kp UP    &trans    &kp LBRC                       &kp RBRC  &kp N7 &kp N8 &kp N9 &kp KP_PLUS
-    &trans  &rgb_ug RGB_EFF    &kp LEFT  &kp DOWN  &kp RIGHT &kp LBKT                       &kp RBKT  &kp N4 &kp N5 &kp N6 &kp KP_MINUS &trans
-    &trans    &trans    &kp PG_UP &kp CAPS  &kp PG_DN &kp LPAR  &kp C_MUTE     &kp K_PP    &kp RPAR  &kp N1 &kp N2 &kp N3 &kp KP_MULTIPLY &trans
+    &trans   &trans    &kp UP    &trans    &kp LBRC                       &kp RBRC  &kp N7 &kp N8 &kp N9 &kp KP_PLUS
+    &rgb_ug RGB_BRI  &rgb_ug RGB_EFF    &kp LEFT  &kp DOWN  &kp RIGHT &kp LBKT                       &kp RBKT  &kp N4 &kp N5 &kp N6 &kp KP_MINUS &trans
+    &rgb_ug RGB_BRD    &trans    &kp PG_UP &kp CAPS  &kp PG_DN &kp LPAR  &kp C_MUTE     &kp K_PP    &kp RPAR  &kp N1 &kp N2 &kp N3 &kp KP_MULTIPLY &trans
                                   &trans    &trans    &trans    &trans     &trans    &kp DELETE &kp N0 &trans  
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_FF C_RW>;
