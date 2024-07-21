@@ -54,12 +54,24 @@
             combo_closetab {
                 timeout-ms = <50>;
                 key-positions = <1 2>;
-                bindings = <&kp LCTRL &kp F4>;
+                bindings = <&macro_closetab>;
             };
-    };
+     };
 
-        keymap {
-                compatible = "zmk,keymap";
+     macros {
+            macro_closetab: macro_closetab {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp F4>
+                    , <&macro_release &kp LCTRL>
+                    ;
+            };
+     };
+
+     keymap {
+            compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
