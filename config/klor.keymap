@@ -26,6 +26,9 @@
 #define RAISE  2
 #define ADJUST 3
 
+&led_strip {
+    chain-length = <21>;
+};
 
 / {
     behaviors {
@@ -44,13 +47,11 @@
      combos {
             compatible = "zmk,combos";
             combo_esc {
-                timeout-ms = <150>;
+                timeout-ms = <250>;
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
             };
     };
-
-
 
         keymap {
                 compatible = "zmk,keymap";
