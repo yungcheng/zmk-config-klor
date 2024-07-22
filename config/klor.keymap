@@ -106,19 +106,19 @@ label= "BASE"                                                  ;
 label= "RAISE"                                                 ;
 // └───────────────────────────────────────────────────────────┘
 /*           ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-             │ RGB_SPI │ RGB_HUI │         │         │    {    │                    │    }    │   LEFT  │   UP    │  RIGHT  │         │
+             │ RGB_SPI │ RGB_HUI │         │         │    {    │                    │    }    │   LEFT  │   UP    │  RIGHT  │   HOME  │
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │ RGB_BRI │ RGB_EFF │         │         │         │    [    │                    │    ]    │   P UP  │  DOWN   │ P DOWN  │         │         │
+   │ RGB_BRI │ RGB_EFF │         │         │         │    [    │                    │    ]    │         │  DOWN   │         │         │  P UP   │
    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤╭────────╮╭────────╮├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-   │ RGB_BRD │ RGB_SPD │ RGB_HUD │         │         │    (    ││  MUTE  ││PLY/PSE ││    )    │   HOME  │         │   END   │         │         │
+   │ RGB_BRD │ RGB_SPD │ RGB_HUD │         │         │    (    ││  MUTE  ││PLY/PSE ││    )    │         │         │         │   END   │ P DOWN  │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┼╰────────╯╰────────╯┼─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │   CTRL  │         │         │  LSHIFT ││  RSHIFT │         │         │  ADJUST │  
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */ 
  bindings = <
  //╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷         ╷
-                    &rgb_ug RGB_SPI &rgb_ug RGB_HUI &trans    &trans &kp LBRC                       &kp RBRC &kp LEFT  &kp UP   &kp RIGHT &trans
-    &rgb_ug RGB_BRI &rgb_ug RGB_EFF &trans          &trans    &trans &kp LBKT                       &kp RBKT &kp PG_UP &kp DOWN &kp PG_DN &trans &trans
-    &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_HUD &trans    &trans &kp LPAR &kp C_MUTE  &kp K_PP  &kp RPAR &kp HOME  &trans   &kp END   &trans &trans
+                    &rgb_ug RGB_SPI &rgb_ug RGB_HUI &trans    &trans &kp LBRC                       &kp RBRC &kp LEFT &kp UP   &kp RIGHT &kp HOME
+    &rgb_ug RGB_BRI &rgb_ug RGB_EFF &trans          &trans    &trans &kp LBKT                       &kp RBKT &trans   &kp DOWN &trans    &trans  &kp PG_UP
+    &rgb_ug RGB_BRD &rgb_ug RGB_SPD &rgb_ug RGB_HUD &trans    &trans &kp LPAR &kp C_MUTE  &kp K_PP  &kp RPAR &trans   &trans   &trans    &kp END &kp DOWN
                                                     &kp LCTRL &trans &trans   &mo LSHFT   &mo RSHFT &trans   &trans   &mo ADJUST  
                         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_AC_FORWARD C_AC_BACK>;
