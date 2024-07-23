@@ -78,9 +78,7 @@
                 #binding-cells = <0>;
                 bindings
                     = <&macro_press &kp LCTRL>
-                    , <&macro_press &mo LSHFT>
-                    , <&macro_tap &kp T>
-                    , <&macro_release &mo LSHFT>
+                    , <&macro_tap &kp LS(T)>
                     , <&macro_release &kp LCTRL>
                     ;
             };
