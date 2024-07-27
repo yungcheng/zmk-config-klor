@@ -24,14 +24,14 @@
 		compatible = "alps,ec11";
 		label = "LEFT_ENCODER";
 		steps = <30>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	right_encoder: encoder_right {
 		compatible = "alps,ec11";
 		label = "RIGHT_ENCODER";
 		steps = <30>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	sensors {
