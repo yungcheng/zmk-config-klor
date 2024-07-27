@@ -30,6 +30,10 @@
     chain-length = <21>;
 };
 
+&sensors {
+    triggers-per-rotation = <30>;
+};
+
 / {
     behaviors {
         hm: homerow_mods {
