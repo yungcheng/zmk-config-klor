@@ -71,6 +71,16 @@
                 key-positions = <2 3>;
                 bindings = <&macro_lasttab>;
             };
+            combo_prtscr {
+                timeout-ms = <50>;
+                key-positions = <3 4>;
+                bindings = <&kp PSCRN>;
+            };
+            combo_terminal {
+                timeout-ms = <50>;
+                key-positions = <1 3>;
+                bindings = <&macro_terminal>;
+            };
      };
 
      macros {
@@ -89,6 +99,15 @@
                 bindings
                     = <&macro_press &kp LCTRL>
                     , <&macro_tap &kp LS(T)>
+                    , <&macro_release &kp LCTRL>
+                    ;
+            };
+            macro_terminal: macro_terminal {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp LA(T)>
                     , <&macro_release &kp LCTRL>
                     ;
             };
