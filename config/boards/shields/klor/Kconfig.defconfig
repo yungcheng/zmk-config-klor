@@ -1,14 +1,22 @@
-if SHIELD_KLOR_LEFT
+if SHIELD_KLOR_DONGLE
+config ZMK_KEYBOARD_NAME
+    default "KLOR DONGLE"
 
-    config ZMK_KEYBOARD_NAME
-        default "KLOR"
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+    default y
 
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
 
-endif # LEFT
+# Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
+config BT_MAX_CONN
+    default 6
 
+# Set this to the same number as BT_MAX_CONN
+config BT_MAX_PAIRED
+    default 6
 
+endif # DONGLE
 
 if SHIELD_KLOR_LEFT || SHIELD_KLOR_RIGHT
 
@@ -26,8 +34,6 @@ if ZMK_DISPLAY
 
 endif # ZMK_DISPLAY
 
-
-
 if LVGL
 
     config LV_Z_VDB_SIZE
@@ -44,6 +50,5 @@ if LVGL
     endchoice
 
 endif # LVGL
-
 
 endif # LEFT RIGHT
