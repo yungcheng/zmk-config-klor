@@ -134,10 +134,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                &kp Q  &kp W  &kp E   &kp R             &kp T                                            &kp Y      &kp U          &kp I      &kp O    &kp P
-&sys_reset      &kp A  &kp S  &kp D   &kp F             &kp G                                            &kp H      &kp J          &kp K      &kp L    &kp SEMI  &trans
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C   &kp V             &kp B               &kp C_MUTE  &kp K_PP         &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                              &kp LEFT_CONTROL  &mt LEFT_GUI ENTER  &lt 1 TAB &trans &trans  &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_ALT
+                &kp Q  &kp W  &kp E             &kp R               &kp T                            &kp Y            &kp U      &kp I          &kp O    &kp P
+&kp ESCAPE      &kp A  &kp S  &kp D             &kp F               &kp G                            &kp H            &kp J      &kp K          &kp L    &kp SEMI  &kp GRAVE
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V               &kp B      &kp C_MUTE  &kp K_PP  &kp N            &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp SQT
+                              &kp LEFT_CONTROL  &mt LEFT_GUI ENTER  &lt 1 TAB  &trans      &trans    &lt 2 BACKSPACE  &kp SPACE  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_AC_FORWARD C_AC_BACK>;
