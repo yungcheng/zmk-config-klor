@@ -26,8 +26,7 @@ include:
   
   - board: seeeduino_xiao_ble
     shield: klor_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args:  -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT=y   -DCONFIG_ZMK_STUDIO=y
+    cmake-args:  -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT=y
   
   - board: seeeduino_xiao_ble
     shield: settings_reset
