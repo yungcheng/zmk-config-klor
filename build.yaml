@@ -25,7 +25,7 @@ include:
     shield: settings_reset
   
   - board: seeeduino_xiao_ble
-    shield: klor_dongle
+    shield: klor_dongle dongle_display
     cmake-args:  -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT=y
   
   - board: seeeduino_xiao_ble
