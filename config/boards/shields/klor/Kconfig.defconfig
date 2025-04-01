@@ -1,6 +1,6 @@
 if SHIELD_KLOR_DONGLE
 config ZMK_KEYBOARD_NAME
-    default "KLOR DONGLE"
+    default "KLOR DOngLED"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
